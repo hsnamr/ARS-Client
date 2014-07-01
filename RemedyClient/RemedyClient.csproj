@@ -1,0 +1,168 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80BE9194-9C0B-4372-B99D-DD2FED762657}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RemedyClient</RootNamespace>
+    <AssemblyName>RemedyClient</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JobDoneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobDoneForm.Designer.cs">
+      <DependentUpon>JobDoneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailerForm.Designer.cs">
+      <DependentUpon>MailerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberDeletionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberDeletionForm.Designer.cs">
+      <DependentUpon>MemberDeletionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemForm.designer.cs">
+      <DependentUpon>SystemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaderForm.designer.cs">
+      <DependentUpon>LeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberForm.designer.cs">
+      <DependentUpon>MemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketCreationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketCreationForm.designer.cs">
+      <DependentUpon>TicketCreationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberCreationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberCreationForm.designer.cs">
+      <DependentUpon>MemberCreationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowTicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowTicketForm.Designer.cs">
+      <DependentUpon>ShowTicketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="JobDoneForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>JobDoneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MailerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberDeletionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MemberDeletionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemForm.resx">
+      <DependentUpon>SystemForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaderForm.resx">
+      <DependentUpon>LeaderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberForm.resx">
+      <DependentUpon>MemberForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketCreationForm.resx">
+      <DependentUpon>TicketCreationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberCreationForm.resx">
+      <DependentUpon>MemberCreationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowTicketForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowTicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
