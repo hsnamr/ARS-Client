@@ -48,11 +48,11 @@ namespace RemedyClient
             new ShowTicketForm(reader, writer, tokens[0], tokens[2]).ShowDialog();
         }
 
-        protected override void OnClosing(CancelEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
             writer.WriteLine("Quit");
             writer.Flush();
-            base.OnClosing(e);
+            base.OnFormClosing(e);
         }
 
         private void OnMouseClick(object sender, MouseEventArgs e)
@@ -65,7 +65,7 @@ namespace RemedyClient
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (radJobDone.Checked)
-                new JobDoneForm(reader, writer, tokens[0]);
+                new JobDoneForm(stream, reader, writer, tokens[0]).ShowDialog();
             else if (radWorkOnProgress.Checked)
             {
                 writer.WriteLine("Update Status1");

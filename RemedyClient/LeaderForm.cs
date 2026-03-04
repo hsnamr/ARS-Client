@@ -56,11 +56,11 @@ namespace RemedyClient
             new ShowTicketForm(reader, writer, tokens[0],tokens[2]).ShowDialog();
         }
 
-        protected override void OnClosing(CancelEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
             writer.WriteLine("Quit");
             writer.Flush();
-            base.OnClosing(e);
+            base.OnFormClosing(e);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

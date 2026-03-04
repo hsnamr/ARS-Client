@@ -16,6 +16,7 @@ namespace RemedyClient
 
         StreamReader reader;
         StreamWriter writer;
+        NetworkStream? stream;
         string ticketNumber;
 
         public JobDoneForm()
@@ -23,12 +24,18 @@ namespace RemedyClient
             InitializeComponent();
         }
 
-        public JobDoneForm(StreamReader reader, StreamWriter writer, string ticketNumber)
+        public JobDoneForm(NetworkStream? stream, StreamReader reader, StreamWriter writer, string ticketNumber)
         {
             InitializeComponent();
+            this.stream = stream;
             this.reader = reader;
             this.writer = writer;
             this.ticketNumber = ticketNumber;
+        }
+
+        public JobDoneForm(StreamReader reader, StreamWriter writer, string ticketNumber)
+            : this(null, reader, writer, ticketNumber)
+        {
         }
 
         public void sendUpdateInfo()
@@ -92,7 +99,8 @@ namespace RemedyClient
                     while (tillNow < inFile.Length)
                     {
                         int read = inFile.Read(buffer2, 0, buffer2.Length);
-                        stream.Write(buffer2, 0, read);
+                        if (stream != null)
+                            stream.Write(buffer2, 0, read);
                         tillNow += read;
                     }
                     MessageBox.Show("I have finished sending");

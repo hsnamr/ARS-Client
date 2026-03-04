@@ -64,11 +64,11 @@ namespace RemedyClient
             }
         }
 
-        protected override void OnClosing(CancelEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
             writer.WriteLine("Quit");
             writer.Flush();
-            base.OnClosing(e);
+            base.OnFormClosing(e);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

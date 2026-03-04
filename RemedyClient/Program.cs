@@ -1,21 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
+namespace RemedyClient;
 
-namespace RemedyClient
+static class Program
 {
-    static class Program
+    [STAThread]
+    static void Main()
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
-            Application.Run(new LoginForm());
-        }
+        ApplicationConfiguration.Initialize();
+        Application.Run(new LoginForm());
     }
 }

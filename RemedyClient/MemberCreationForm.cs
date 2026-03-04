@@ -50,11 +50,11 @@ namespace RemedyClient
 
             lblMessage.Text = response;
         }
-        protected override void OnClosing(CancelEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
             writer.WriteLine("Quit");
             writer.Flush();
-            base.OnClosing(e);
+            base.OnFormClosing(e);
         }
     }
 }
